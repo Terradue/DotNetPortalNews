@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0769052E-E7AB-414F-AD4C-D96D64BF8B4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Terradue.News</RootNamespace>
+    <AssemblyName>Terradue.News</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terradue\News\RssNews.cs" />
+    <Compile Include="Terradue\News\TumblrNews.cs" />
+    <Compile Include="Terradue\News\TwitterNews.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Terradue\" />
+    <Folder Include="Terradue\News\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Terradue.Portal\Terradue.Portal.csproj">
+      <Project>{2E8D7875-8347-4205-936B-F1BBA2164D87}</Project>
+      <Name>Terradue.Portal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Terradue.OpenSearch.Twitter\Terradue.OpenSearch.Twitter.csproj">
+      <Project>{F5BDC1AD-3355-4EA7-85A3-16F8358D1F50}</Project>
+      <Name>Terradue.OpenSearch.Twitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Terradue.OpenSearch.Tumblr\Terradue.OpenSearch.Tumblr.csproj">
+      <Project>{B068DB08-34CC-4F0B-9752-FCEEC71B1AC9}</Project>
+      <Name>Terradue.OpenSearch.Tumblr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Terradue.OpenSearch\Terradue.OpenSearch.csproj">
+      <Project>{EA911C65-7F54-4909-97AB-AF66C8069D3A}</Project>
+      <Name>Terradue.OpenSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Terradue.ServiceModel.Syndication\Terradue.ServiceModel.Syndication.csproj">
+      <Project>{729A82DF-D3CE-4A1A-BA83-0508F0362DB5}</Project>
+      <Name>Terradue.ServiceModel.Syndication</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
