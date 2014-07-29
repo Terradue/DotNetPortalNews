@@ -25,7 +25,7 @@ namespace Terradue.News {
             this.Url = feed.Url;
             this.Author = feed.Author;
             this.Content = feed.Content;
-            this.Abstract = feed.Author;
+            this.Abstract = feed.Abstract;
         }
 
         /// <summary>
