@@ -40,7 +40,9 @@ namespace Terradue.News {
 
         public static List<TumblrNews> FromFeeds(IfyContext context, List<TumblrFeed> feeds) {
             List<TumblrNews> result = new List<TumblrNews>();
-            foreach (TumblrFeed feed in feeds) result.Add(new TumblrNews(context, feed));
+            try{
+                foreach (TumblrFeed feed in feeds) result.Add(new TumblrNews(context, feed));
+            }catch(Exception){}
             return result;
         }
 
