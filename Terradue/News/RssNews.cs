@@ -172,12 +172,12 @@ namespace Terradue.News {
         public ulong TotalResults() {
             return 0;
         }
-
-        public void ApplyResultFilters(ref IOpenSearchResult osr) {}
-
+            
         public OpenSearchUrl GetSearchBaseUrl(string mimeType) {
             return new OpenSearchUrl (string.Format("{0}/{1}/search", context.BaseUrl, "rss"));
         }
+
+        public void ApplyResultFilters(OpenSearchRequest request, ref IOpenSearchResultCollection osr) {}
     }
 }
 
