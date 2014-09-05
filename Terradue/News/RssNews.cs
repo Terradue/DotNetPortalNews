@@ -51,6 +51,9 @@ namespace Terradue.News {
                     rss.Title = item.Title;
                     rss.Url = item.Links[0].Uri.AbsoluteUri;
                     rss.Content = item.Summary.Text;
+                    rss.Time = item.PublishDate.DateTime;
+                    if (item.Authors.Count > 0)
+                        rss.Author = item.Authors[0].Name;
                     result.Add(rss);
                 }           
             }
