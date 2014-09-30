@@ -21,7 +21,7 @@ namespace Terradue.News {
         public TwitterNews(IfyContext context, TwitterFeed feed) : base(context){
             this.Identifier = feed.Identifier;
             this.Title = feed.Title;
-            this.Tags = feed.Tags;
+            this.Tags = (feed.Tags != null ? string.Join(",", feed.Tags) : null);
             this.Time = feed.Time;
             this.Url = feed.Url;
             this.Author = feed.Author;
@@ -46,7 +46,8 @@ namespace Terradue.News {
         /// <param name="feeds">Feeds.</param>
         public static List<TwitterNews> FromFeeds(IfyContext context, List<TwitterFeed> feeds) {
             List<TwitterNews> result = new List<TwitterNews>();
-            foreach (TwitterFeed feed in feeds) result.Add(new TwitterNews(context, feed));
+            if(feeds != null)
+                foreach (TwitterFeed feed in feeds) result.Add(new TwitterNews(context, feed));
             return result;
         }
 
@@ -69,7 +70,7 @@ namespace Terradue.News {
                 TwitterFeed feed = new TwitterFeed(app, context.BaseUrl);
                 feed.Identifier = news.Identifier;
                 feed.Title = news.Title;
-                feed.Tags = news.Tags;
+                feed.Tags = (news.Tags != null ? new List<string>(news.Tags.Split(",".ToCharArray(),StringSplitOptions.RemoveEmptyEntries)) : null);
                 feed.Time = news.Time;
                 feed.Url = news.Url;
                 feed.Author = news.Author;
