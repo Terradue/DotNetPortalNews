@@ -58,9 +58,5 @@
       <Project>{B068DB08-34CC-4F0B-9752-FCEEC71B1AC9}</Project>
       <Name>Terradue.OpenSearch.Tumblr</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Terradue.OpenSearch\Terradue.OpenSearch.csproj">
-      <Project>{EA911C65-7F54-4909-97AB-AF66C8069D3A}</Project>
-      <Name>Terradue.OpenSearch</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
