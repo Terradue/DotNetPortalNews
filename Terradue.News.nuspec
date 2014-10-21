@@ -21,7 +21,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Terradue.Authentication.Umsso/bin/Terradue.Authentication.Umsso.dll" target="lib/net40/Terradue.Authentication.Umsso.dll" />
+    <file src="Terradue.News/bin/Terradue.News.dll" target="lib/net40/Terradue.News.dll" />
   </files>
 
 </package>
