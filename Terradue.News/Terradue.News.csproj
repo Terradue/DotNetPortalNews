@@ -57,6 +57,24 @@
     <Reference Include="Terradue.Portal.Agent">
       <HintPath>..\packages\Terradue.Portal.2.5.5\lib\net40\Terradue.Portal.Agent.exe</HintPath>
     </Reference>
+    <Reference Include="Hammock.ClientProfile">
+      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="TweetSharp">
+      <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\TweetSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Terradue.OpenSearch.Twitter">
+      <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.1\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Terradue.OpenSearch.Tumblr">
+      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.1\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,16 +86,6 @@
   <ItemGroup>
     <Folder Include="Terradue\" />
     <Folder Include="Terradue\News\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Terradue.OpenSearch.Twitter\Terradue.OpenSearch.Twitter.csproj">
-      <Project>{F5BDC1AD-3355-4EA7-85A3-16F8358D1F50}</Project>
-      <Name>Terradue.OpenSearch.Twitter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Terradue.OpenSearch.Tumblr\Terradue.OpenSearch.Tumblr.csproj">
-      <Project>{B068DB08-34CC-4F0B-9752-FCEEC71B1AC9}</Project>
-      <Name>Terradue.OpenSearch.Tumblr</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
