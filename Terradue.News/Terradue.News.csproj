@@ -54,9 +54,6 @@
     <Reference Include="Terradue.OpenSearch.Tumblr">
       <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.1\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
