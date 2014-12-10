@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Terradue.News</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Terradue.News</title>
     <authors>Terradue</authors>
     <licenseUrl>https://github.com/Terradue/DotNetOpenSearchTwitter/blob/master/LICENSE</licenseUrl>-->
@@ -10,8 +10,8 @@
     <description>Terradue.News is a library targeting .NET 4.0 and above with base for all Terradue.News</description>
     <summary>Terradue news (twitter/tumblr/rss/...) library for .Net</summary>
     <dependencies>
-      <dependency id="Terradue.Portal" version="[2.5.5,2.6)" />
-      <dependency id="Terradue.OpenSearch" version="[1.7.0.1,1.8)" />
+      <dependency id="Terradue.Portal" version="[2.6,2.7)" />
+      <dependency id="Terradue.OpenSearch" version="[1.8.0,1.9)" />
       <dependency id="Terradue.OpenSearch.Twitter" version="[1.0.1,1.1)" />
       <dependency id="Terradue.OpenSearch.Tumblr" version="[1.0.1,1.1)" />
       <dependency id="Terradue.ServiceModel.Syndication" version="[1.0.0.0,1.1)" />

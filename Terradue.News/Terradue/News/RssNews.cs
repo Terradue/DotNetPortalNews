@@ -48,7 +48,7 @@ namespace Terradue.News {
                 AtomFeed feed = new AtomFeed(ff.Feed);
                 foreach (AtomItem item in feed.Items) {
                     RssNews rss = new RssNews(context);
-                    rss.Title = item.Title;
+                    rss.Title = item.Title.Text;
                     rss.Url = item.Links[0].Uri.AbsoluteUri;
                     rss.Content = item.Summary.Text;
                     rss.Time = item.PublishDate.DateTime;
@@ -181,6 +181,10 @@ namespace Terradue.News {
         }
 
         public void ApplyResultFilters(OpenSearchRequest request, ref IOpenSearchResultCollection osr) {}
+
+        public ParametersResult DescribeParameters() {
+            return OpenSearchFactory.GetDefaultParametersResult();
+        }
     }
 }
 
