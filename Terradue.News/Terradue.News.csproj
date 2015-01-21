@@ -7,6 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Terradue.News</RootNamespace>
     <AssemblyName>Terradue.News</AssemblyName>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
