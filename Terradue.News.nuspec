@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Terradue.News</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <title>Terradue.News</title>
     <authors>Terradue</authors>
     <licenseUrl>https://github.com/Terradue/DotNetOpenSearchTwitter/blob/master/LICENSE</licenseUrl>-->
@@ -16,8 +16,7 @@
       <dependency id="Terradue.OpenSearch.Tumblr" version="[1.0.1,1.1)" />
       <dependency id="Terradue.ServiceModel.Syndication" version="[1.0.0.0,1.1)" />
       <dependency id="Terradue.Util" version="[1.4.0,1.5)" />
-      <dependency id="log4net" version="[2.0.0]" />
-      <dependency id="MySql.Data" version="[1.0.7.30073]" />
+      <dependency id="log4net" version="[2.0.0,]" />
     </dependencies>
   </metadata>
   <files>
