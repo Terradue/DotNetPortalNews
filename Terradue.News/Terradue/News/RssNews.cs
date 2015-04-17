@@ -185,6 +185,12 @@ namespace Terradue.News {
         public ParametersResult DescribeParameters() {
             return OpenSearchFactory.GetDefaultParametersResult();
         }
+
+        public bool CanCache {
+            get {
+                return true;
+            }
+        }
     }
 }
 
