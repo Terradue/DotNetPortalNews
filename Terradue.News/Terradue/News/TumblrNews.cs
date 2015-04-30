@@ -72,6 +72,33 @@ namespace Terradue.News {
             }
             return result;
         }
+
+        // <summary>
+        /// Loads the tumblr feeds.
+        /// </summary>
+        /// <returns>The tumblr feeds.</returns>
+        /// <param name="context">Context.</param>
+        public static List<TumblrFeed> LoadTumblrFeeds(IfyContext context, string apiType, string apiMethod, string apiUrl){
+            List<TumblrFeed> result = new List<TumblrFeed>();
+            TumblrApplication app = new TumblrApplication(context.GetConfigValue("Tumblr-apiKey"), apiMethod, apiType, apiUrl);
+
+            EntityList<TumblrNews> tumblrs = new EntityList<TumblrNews>(context);
+            tumblrs.Load();
+
+            foreach (TumblrNews news in tumblrs) {
+                TumblrFeed feed = new TumblrFeed(app, context.BaseUrl);
+                feed.Identifier = news.Identifier;
+                feed.Title = news.Title;
+                feed.Tags = news.Tags;
+                feed.Time = news.Time;
+                feed.Url = news.Url;
+                feed.Author = news.Author;
+                feed.Content = news.Content;
+                feed.Abstract = news.Abstract;
+                result.Add(feed);
+            }
+            return result;
+        }
     }
 }
 

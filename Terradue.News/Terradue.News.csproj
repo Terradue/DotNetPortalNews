@@ -52,9 +52,6 @@
     <Reference Include="TweetSharp">
       <HintPath>..\packages\TweetSharp.2.3.1\lib\4.0\TweetSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Terradue.OpenSearch">
-      <HintPath>..\packages\Terradue.OpenSearch.1.9.11\lib\net40\Terradue.OpenSearch.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.6\lib\net40\MySql.Data.dll</HintPath>
     </Reference>
@@ -73,8 +70,11 @@
     <Reference Include="Terradue.OpenSearch.Twitter">
       <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.4\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
     </Reference>
+    <Reference Include="Terradue.OpenSearch">
+      <HintPath>..\packages\Terradue.OpenSearch.1.9.13\lib\net40\Terradue.OpenSearch.dll</HintPath>
+    </Reference>
     <Reference Include="Terradue.OpenSearch.Tumblr">
-      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.4\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
+      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.5\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
