@@ -172,8 +172,8 @@ namespace Terradue.News {
             return OpenSearchFactory.GetBaseOpenSearchParameter();
         }
 
-        public long TotalResults {
-            get { return 0; }
+        public long GetTotalResults(string mimetype, NameValueCollection parameters) {
+            return 0;
         }
             
         public OpenSearchUrl GetSearchBaseUrl(string mimeType) {
