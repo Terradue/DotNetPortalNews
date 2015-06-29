@@ -58,23 +58,23 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Terradue.OpenSearch.Tumblr">
-      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.8\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
-    </Reference>
-    <Reference Include="Terradue.OpenSearch.Twitter">
-      <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.5\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
-    </Reference>
     <Reference Include="Terradue.Portal">
-      <HintPath>..\packages\Terradue.Portal.2.6.32\lib\net40\Terradue.Portal.dll</HintPath>
+      <HintPath>..\packages\Terradue.Portal.2.6.33\lib\net40\Terradue.Portal.dll</HintPath>
     </Reference>
     <Reference Include="Terradue.Portal.AdminTool">
-      <HintPath>..\packages\Terradue.Portal.2.6.32\lib\net40\Terradue.Portal.AdminTool.exe</HintPath>
+      <HintPath>..\packages\Terradue.Portal.2.6.33\lib\net40\Terradue.Portal.AdminTool.exe</HintPath>
     </Reference>
     <Reference Include="Terradue.Portal.Agent">
-      <HintPath>..\packages\Terradue.Portal.2.6.32\lib\net40\Terradue.Portal.Agent.exe</HintPath>
+      <HintPath>..\packages\Terradue.Portal.2.6.33\lib\net40\Terradue.Portal.Agent.exe</HintPath>
     </Reference>
     <Reference Include="Terradue.OpenSearch">
-      <HintPath>..\packages\Terradue.OpenSearch.1.10.3\lib\net40\Terradue.OpenSearch.dll</HintPath>
+      <HintPath>..\packages\Terradue.OpenSearch.1.10.6\lib\net40\Terradue.OpenSearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Terradue.OpenSearch.Tumblr">
+      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.9\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
+    </Reference>
+    <Reference Include="Terradue.OpenSearch.Twitter">
+      <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.6\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
