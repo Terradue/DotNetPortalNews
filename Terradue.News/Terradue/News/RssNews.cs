@@ -182,16 +182,13 @@ namespace Terradue.News {
             return new OpenSearchUrl (string.Format("{0}/{1}/search", context.BaseUrl, "rss"));
         }
 
-        public void ApplyResultFilters(OpenSearchRequest request, ref IOpenSearchResultCollection osr) {}
-
-        public ParametersResult DescribeParameters() {
-            return OpenSearchFactory.GetDefaultParametersResult();
-        }
-
         public bool CanCache {
             get {
                 return true;
             }
+        }
+
+        public void ApplyResultFilters(OpenSearchRequest request, ref IOpenSearchResultCollection osr, string finalContentType) {
         }
     }
 }

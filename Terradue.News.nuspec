@@ -11,7 +11,7 @@
     <summary>Terradue news (twitter/tumblr/rss/...) library for .Net</summary>
     <dependencies>
       <dependency id="Terradue.Portal" version="[2.6,2.7)" />
-      <dependency id="Terradue.OpenSearch" version="[1.10,1.11)" />
+      <dependency id="Terradue.OpenSearch" version="[1.11,1.12)" />
       <dependency id="Terradue.OpenSearch.Twitter" version="[1.0.1,1.1)" />
       <dependency id="Terradue.OpenSearch.Tumblr" version="[1.0.1,1.1)" />
       <dependency id="Terradue.ServiceModel.Syndication" version="[1.0.0.0,1.1)" />
