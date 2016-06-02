@@ -1,6 +1,3 @@
-using System.Reflection;
-using System.Runtime.CompilerServices;
-
 /*!
 
 \namespace Terradue.News
@@ -28,27 +25,22 @@ using System.Runtime.CompilerServices;
 
 */
 
-// Information about this assembly is defined by the following attributes.
-// Change them to the values specific to your project.
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using NuGet4Mono.Extensions;
 
 [assembly: AssemblyTitle("Terradue.News")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Terradue.News is a library targeting .NET 4.0 and above that provides opensearch interfaces for News entities of Terradue Portal")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
+[assembly: AssemblyCompany("Terradue")]
+[assembly: AssemblyProduct("Terradue.News")]
 [assembly: AssemblyCopyright("Terradue")]
+[assembly: AssemblyAuthors("Enguerran Boissier")]
+[assembly: AssemblyProjectUrl("https://git.terradue.com/sugar/terradue-news")]
+[assembly: AssemblyLicenseUrl("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("1.0.11")]
+[assembly: AssemblyInformationalVersion("1.0.11")]
 
-// The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
-// The form "{Major}.{Minor}.*" will automatically update the build and revision,
-// and "{Major}.{Minor}.{Build}.*" will update just the revision.
-
-[assembly: AssemblyVersion("1.0.11.*")]
-[assembly: AssemblyInformationalVersion ("1.0.11")]
-// The following attributes are used to specify the signing key for the assembly,
-// if desired. See the Mono documentation for more information about signing.
-
-//[assembly: AssemblyDelaySign(false)]
-//[assembly: AssemblyKeyFile("")]
-
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
