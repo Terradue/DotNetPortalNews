@@ -2,7 +2,7 @@
 
 \namespace Terradue.News
 @{
-    Terradue.News Software Package
+    Terradue .Net Library to handle multi-source news (Atom/RSS, Twitter, Tumblr...)
 
     \xrefitem sw_version "Versions" "Software Package Version" 1.0.11
 
