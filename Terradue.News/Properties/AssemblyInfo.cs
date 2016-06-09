@@ -4,11 +4,11 @@
 @{
     Terradue .Net Library to handle multi-source news (Atom/RSS, Twitter, Tumblr...)
 
-    \xrefitem sw_version "Versions" "Software Package Version" 1.0.11
+    \xrefitem sw_version "Versions" "Software Package Version" 1.0.12
 
-    \xrefitem sw_link "Link" "Software Package Link" [Terradue.New](https://git.terradue.com/sugar/terradue-news)
+    \xrefitem sw_link "Link" "Software Package Link" [Terradue.News](https://git.terradue.com/sugar/terradue-news)
 
-    \xrefitem sw_license "License" "Software License" [incubating](https://git.terradue.com/sugar/terradue-news)
+    \xrefitem sw_license "License" "Software License" [AGPL](https://git.terradue.com/sugar/terradue-news/LICENSE)
 
     \xrefitem sw_req "Require" "Software Dependencies" \ref Terradue.OpenSearch
 
