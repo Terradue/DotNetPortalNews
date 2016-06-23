@@ -25,6 +25,7 @@ namespace Terradue.News {
             this.Time = feed.Time;
             this.Url = feed.Url;
             this.Author = feed.Author;
+            this.AuthorImage = feed.AuthorImageUrl;
             this.Content = feed.Content;
         }
 
@@ -74,6 +75,7 @@ namespace Terradue.News {
                 feed.Time = news.Time;
                 feed.Url = news.Url;
                 feed.Author = news.Author;
+                feed.AuthorImageUrl = news.AuthorImage;
                 feed.Content = news.Content;
                 result.Add(feed);
             }
