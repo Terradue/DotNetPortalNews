@@ -59,7 +59,7 @@
       <HintPath>..\packages\Mono.Addins.1.2\lib\net40\Mono.Addins.dll</HintPath>
     </Reference>
     <Reference Include="Terradue.OpenSearch.Twitter">
-      <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.10\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
+      <HintPath>..\packages\Terradue.OpenSearch.Twitter.1.0.11\lib\net40\Terradue.OpenSearch.Twitter.dll</HintPath>
     </Reference>
     <Reference Include="Terradue.Metadata">
       <HintPath>..\packages\Terradue.Metadata.1.4.0\lib\net40\Terradue.Metadata.dll</HintPath>
