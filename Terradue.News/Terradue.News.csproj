@@ -52,9 +52,6 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.5\lib\net40-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Terradue.OpenSearch.Tumblr">
-      <HintPath>..\packages\Terradue.OpenSearch.Tumblr.1.0.11\lib\net40\Terradue.OpenSearch.Tumblr.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -126,7 +123,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terradue\News\RssNews.cs" />
-    <Compile Include="Terradue\News\TumblrNews.cs" />
     <Compile Include="Terradue\News\TwitterNews.cs" />
     <Compile Include="Mono.Options\Options.cs" />
   </ItemGroup>
