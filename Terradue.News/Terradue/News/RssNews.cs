@@ -104,7 +104,7 @@ namespace Terradue.News {
             }
         }
 
-        public OpenSearchRequest Create(string mimetype, System.Collections.Specialized.NameValueCollection parameters) {
+        public OpenSearchRequest Create(QuerySettings querySettings, NameValueCollection parameters) {
             UriBuilder url = new UriBuilder(context.BaseUrl);
             url.Path += "rss/"+this.Identifier+"/search";
             var array = (from key in parameters.AllKeys
@@ -113,7 +113,7 @@ namespace Terradue.News {
                 .ToArray();
             url.Query = string.Join("&", array);
 
-            MemoryOpenSearchRequest request = new MemoryOpenSearchRequest(new OpenSearchUrl(url.ToString()), mimetype);
+            MemoryOpenSearchRequest request = new MemoryOpenSearchRequest(new OpenSearchUrl(url.ToString()), querySettings.PreferredContentType);
 
             Stream input = request.MemoryInputStream;
 
