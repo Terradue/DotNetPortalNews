@@ -82,6 +82,27 @@ namespace Terradue.News {
             return result;
         }
             
+        public static TwitterCollection LoadTwitterCollection(IfyContext context) {
+            List<TwitterFeed> result = new List<TwitterFeed>();
+            TwitterApplication app = new TwitterApplication(context.GetConfigValue("Twitter-consumerKey"),
+                                                            context.GetConfigValue("Twitter-consumerSecret"),
+                                                            context.GetConfigValue("Twitter-token"),
+                                                            context.GetConfigValue("Twitter-tokenSecret"));
+
+            var collection = new TwitterCollection(app, context.BaseUrl);
+            collection.Identifier = "tweet";
+            collection.Accounts = new List<TwitterAccount>();
+
+            EntityList<TwitterNews> twitters = new EntityList<TwitterNews>(context);
+            twitters.Load();
+
+            foreach (TwitterNews news in twitters) {
+                var tags = news.Tags != null ? new List<string>(news.Tags.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)) : null;
+                collection.Accounts.Add(new TwitterAccount { Title = news.Title, Author = news.Author, Tags = tags });
+            }
+            return collection;
+        }
+
     }
 }
 

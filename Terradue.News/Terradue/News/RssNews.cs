@@ -64,8 +64,7 @@ namespace Terradue.News {
 
             XmlReader xr;
 
-            var ff = new Rss20FeedFormatter(); // for Atom you can use Atom10FeedFormatter()
-            //var xrd = new XmlReaderSettings();
+            var ff = new Rss20FeedFormatter();
             try{
                 xr = XmlReader.Create(this.Url);    
             }catch(Exception e){
@@ -73,12 +72,15 @@ namespace Terradue.News {
             }
             ff.ReadFrom(xr);
 
-
             AtomFeed feed = new AtomFeed(ff.Feed);
+            var count = 0;
             foreach (AtomItem item in feed.Items) {
                 item.Content = item.Summary;
                 item.Categories.Add(new SyndicationCategory("rss"));
+                count++;
             }
+            feed.TotalResults = count;
+            feed.Language = null;
 
             var sw = XmlWriter.Create(input);
             Atom10FeedFormatter atomFormatter = new Atom10FeedFormatter(feed.Feed);
