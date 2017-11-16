@@ -60,7 +60,7 @@ namespace Terradue.News {
             return result;
         }
 
-        void GenerateAtomFeed(Stream input, System.Collections.Specialized.NameValueCollection parameters) {
+        AtomFeed GenerateAtomFeed(NameValueCollection parameters) {
 
             XmlReader xr;
 
@@ -82,14 +82,7 @@ namespace Terradue.News {
             feed.TotalResults = count;
             feed.Language = null;
 
-            var sw = XmlWriter.Create(input);
-            Atom10FeedFormatter atomFormatter = new Atom10FeedFormatter(feed.Feed);
-            atomFormatter.WriteTo(sw);
-            sw.Flush();
-            sw.Close();
-
-            return;
-
+            return feed;
         }
 
         public QuerySettings GetQuerySettings(OpenSearchEngine ose) {
@@ -115,11 +108,7 @@ namespace Terradue.News {
                 .ToArray();
             url.Query = string.Join("&", array);
 
-            MemoryOpenSearchRequest request = new MemoryOpenSearchRequest(new OpenSearchUrl(url.ToString()), querySettings.PreferredContentType);
-
-            Stream input = request.MemoryInputStream;
-
-            GenerateAtomFeed(input, parameters);
+            AtomOpenSearchRequest request = new AtomOpenSearchRequest(new OpenSearchUrl(url.ToString()), GenerateAtomFeed);
 
             return request;
         }
