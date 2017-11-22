@@ -4,7 +4,7 @@
 @{
     Terradue .Net Library to handle multi-source news (Atom/RSS, Twitter, Tumblr...)
 
-    \xrefitem sw_version "Versions" "Software Package Version" 1.1
+    \xrefitem sw_version "Versions" "Software Package Version" 1.3
 
     \xrefitem sw_link "Link" "Software Package Link" [Terradue.News](https://git.terradue.com/sugar/terradue-news)
 
@@ -40,7 +40,7 @@ using NuGet4Mono.Extensions;
 [assembly: AssemblyLicenseUrl("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.2")]
-[assembly: AssemblyInformationalVersion("1.2")]
+[assembly: AssemblyVersion("1.3")]
+[assembly: AssemblyInformationalVersion("1.3")]
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
