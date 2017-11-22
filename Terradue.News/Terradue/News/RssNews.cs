@@ -65,23 +65,23 @@ namespace Terradue.News {
             XmlReader xr;
 
             var ff = new Rss20FeedFormatter();
+            AtomFeed feed = null;
             try{
                 xr = XmlReader.Create(this.Url);    
-            }catch(Exception e){
-                throw e;
-            }
-            ff.ReadFrom(xr);
+                ff.ReadFrom(xr);
 
-            AtomFeed feed = new AtomFeed(ff.Feed);
-            var count = 0;
-            foreach (AtomItem item in feed.Items) {
-                item.Content = item.Summary;
-                item.Categories.Add(new SyndicationCategory("rss"));
-                count++;
+                feed = new AtomFeed(ff.Feed);
+                var count = 0;
+                foreach (AtomItem item in feed.Items) {
+                    item.Content = item.Summary;
+                    item.Categories.Add(new SyndicationCategory("rss"));
+                    count++;
+                }
+                feed.TotalResults = count;
+                feed.Language = null;
+            } catch (Exception e) {
+                return null;
             }
-            feed.TotalResults = count;
-            feed.Language = null;
-
             return feed;
         }
 
