@@ -23,14 +23,10 @@ pipeline {
     }
     stage('Package') {
       steps {
-        parallel(
-          "Package": {
-            sh "nuget4mono -g origin/${env.BRANCH_NAME} -p Terradue.News/packages.config Terradue.News/bin/Terradue.News.dll Terradue.News/Resources/**/*,content/modules/news"
-            sh 'cat *.nuspec'
-            sh 'nuget pack -OutputDirectory build'
-            sh "echo ${params.NUGET_PUBLISH}"           
-          }
-        )
+        sh "nuget4mono -g origin/${env.BRANCH_NAME} -p Terradue.News/packages.config Terradue.News/bin/Terradue.News.dll Terradue.News/Resources/**/*,content/modules/news"
+        sh 'cat *.nuspec'
+        sh 'nuget pack -OutputDirectory build'
+        sh "echo ${params.NUGET_PUBLISH}"           
       }
     }
     stage('Publish') {
