@@ -18,7 +18,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "The library will be build in ${params.DOTNET_CONFIG}"
-        sh "xbuild /p:Configuration=${params.DOTNET_CONFIG}"
+        sh "msbuild /t:build /p:Configuration=${params.DOTNET_CONFIG} /restore:True"
       }
     }
     stage('Package') {
