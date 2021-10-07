@@ -79,7 +79,7 @@ namespace Terradue.News {
                 }
                 feed.TotalResults = count;
                 feed.Language = null;
-            } catch (Exception e) {
+            } catch (Exception) {
                 return null;
             }
             return feed;

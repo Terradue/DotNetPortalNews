@@ -23,10 +23,8 @@ pipeline {
     }
     stage('Package') {
       steps {
-        sh "nuget4mono -g origin/${env.BRANCH_NAME} -p ${workspace}/Terradue.News/packages.config ${workspace}/Terradue.News/bin/Terradue.News.dll ${workspace}/Terradue.News/Resources/**/*,content/modules/news"
-        sh 'cat *.nuspec'
-        sh 'nuget pack -OutputDirectory build'
-        sh "echo ${params.NUGET_PUBLISH}"           
+        sh "msbuild /t:pack /p:Configuration=${params.DOTNET_CONFIG}"
+        sh 'cat */obj/*/*.nuspec'        
       }
     }
     stage('Publish') {
